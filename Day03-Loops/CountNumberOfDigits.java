@@ -6,10 +6,15 @@ public class CountNumberOfDigits {
         System.out.print("Enter a number:");
         int n = sc.nextInt();
         int count = 0;
-
-        while (n != 0) {
-            count++;
-            n /= 10;
+        if(n==0)
+        {
+            count=1;
+        }
+        else {
+            while (n != 0) {
+                count++;
+                n /= 10;
+            }
         }
         System.out.println("The no of digits =" + count);
     }
