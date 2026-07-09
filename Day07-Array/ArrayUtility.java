@@ -17,10 +17,12 @@ public class ArrayUtility {
     public static void displayArray(int[] arr)
     {
         int i=0;
+        System.out.println("The array elements are:");
         while(i< arr.length)
         {
             System.out.print(arr[i]+" ");
             i++;
         }
+        System.out.println();
     }
 }
