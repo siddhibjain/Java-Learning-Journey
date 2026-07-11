@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class IsLowerTriangular
+{
+        public static void main (String[]args)
+        {
+            Scanner sc = new Scanner(System.in);
+            System.out.print(("Enter number of rows and column:"));
+            int n = sc.nextInt();
+            int[][] arr = new int[n][n];
+            System.out.println("Enter matrix elements");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    arr[i][j] = sc.nextInt();
+                }
+            }
+            System.out.println("  matrix is ");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    System.out.printf("%-6d", arr[i][j]);
+                }
+                System.out.println();
+            }
+            boolean lower = true;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (i < j && arr[i][j] != 0)
+                    {
+                        lower = false;
+                        break;
+                    }
+                }
+                if (!lower)
+                {
+                    break;
+                }
+            }
+            if(lower)
+            {
+                System.out.print("It is an Lower Triangular Matrix");
+            }
+            else
+            {
+                System.out.print("It is not an Lower Triangular Matrix");
+            }
+        }
+}
